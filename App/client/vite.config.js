@@ -8,6 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.VITE_BASE_PATH || "/react-vite-deploy",
+  base: process.env.VITE_BASE_PATH || "/jandev",
 });
 
