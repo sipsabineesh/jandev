@@ -69,8 +69,16 @@ import vanilla_muffins_image from "./vanilla_muffins_image.png";
 import quinoa_image from "./quinoa_image.png";
 import brown_rice_image from "./brown_rice_image.png";
 import barley_image from "./barley_image.png";
+import banner2 from "./banner2.png";
+import banner3 from "./banner3.png";
+import banner2_sm from "./banner2_sm.png";
 import shops from "./shops.png";
 import villas from "./villas.png";
+import planning_icon from "./planning_icon.png";
+import estimation_icon from "./estimation_icon.png";
+import designing_icon from "./designing_icon.png";
+import interior_designing_icon from "./interior_designing_icon.png";
+import architectural_designing_icon from "./architectural_designing_icon.png";
 
 export const assets = {
   logo,
@@ -98,6 +106,9 @@ export const assets = {
   main_banner_bg_sm,
   bottom_banner_image,
   bottom_banner_image_sm,
+  banner2,
+  banner2_sm,
+  banner3,
   add_address_iamge,
   box_icon,
 };
@@ -181,25 +192,32 @@ export const footerLinks = [
 
 export const features = [
   {
-    icon: delivery_truck_icon,
-    title: "Fastest Delivery",
-    description: "Groceries delivered in under 30 minutes.",
+    icon: planning_icon,
+    title: "Planning",
+    description: "",
   },
   {
-    icon: leaf_icon,
-    title: "Freshness Guaranteed",
-    description: "Fresh produce straight from the source.",
+    icon: estimation_icon,
+    title: "Estimation",
+    description: "Feasibility at its best.",
   },
   {
-    icon: coin_icon,
-    title: "Affordable Prices",
-    description: "Quality groceries at unbeatable prices.",
+    icon: designing_icon,
+    title: "Designing",
+    description: "Innovative Ideas Designed by Experts",
   },
   {
-    icon: trust_icon,
-    title: "Trusted by Thousands",
-    description: "Loved by 10,000+ happy customers.",
+    icon: architectural_designing_icon,
+    title: "Architectural Designing",
+    description: "",
   },
+  {
+    icon: interior_designing_icon,
+    title: "Interior Designing",
+    description: "",
+  },
+
+
 ];
 
 export const dummyProducts = [
