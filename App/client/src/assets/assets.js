@@ -115,44 +115,44 @@ export const assets = {
 
 export const categories = [
   {
-    text: "Villas",
-    path: "Villas",
+    text: "Planning",
+    path: "Planning",
     image: villas,
     bgColor: "#F0F5DE",
   },
   {
-    text: "Shops",
-    path: "Shops",
+    text: "Estimation",
+    path: "Estimation",
     image: shops,
     bgColor: "#E1F5EC",
   },
   {
-    text: "Villas",
-    path: "Villas",
+    text: "Designing",
+    path: "Designing",
     image: villas,
     bgColor: "#F0F5DE",
   },
   {
-    text: "Shops",
-    path: "Shops",
+    text: "Architectural Designing",
+    path: "ArchitecturalDesigning",
     image: shops,
     bgColor: "#E1F5EC",
   },
   {
-    text: "Villas",
-    path: "Villas",
+    text: "Interior Designing",
+    path: "InteriorDesigning",
     image: villas,
     bgColor: "#F0F5DE",
   },
   {
-    text: "Shops",
-    path: "Shops",
+    text: "Soil Test",
+    path: "SoilTest",
     image: shops,
     bgColor: "#E1F5EC",
   },
   {
-    text: "Villas",
-    path: "Villas",
+    text: "Document Management",
+    path: "Document Management",
     image: villas,
     bgColor: "#F0F5DE",
   },
@@ -193,28 +193,28 @@ export const footerLinks = [
 export const features = [
   {
     icon: planning_icon,
-    title: "Planning",
-    description: "",
+    title: "Site Feasibility Analysis",
+    description: "Resource management",
   },
   {
     icon: estimation_icon,
-    title: "Estimation",
-    description: "Feasibility at its best.",
+    title: "Budget Optimization",
+    description: "Cost control strategies",
   },
   {
     icon: designing_icon,
-    title: "Designing",
+    title: "Modern & Functional Designs",
     description: "Innovative Ideas Designed by Experts",
   },
   {
     icon: architectural_designing_icon,
-    title: "Architectural Designing",
-    description: "",
+    title: "2D & 3D Architectural Plans",
+    description: "Sustainable design practices",
   },
   {
     icon: interior_designing_icon,
-    title: "Interior Designing",
-    description: "",
+    title: "Space Planning & Layout",
+    description: "Furniture & decor selection",
   },
 
 

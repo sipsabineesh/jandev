@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
+import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
      const [open, setOpen] = React.useState(false)
@@ -23,7 +24,10 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center gap-8">
                <NavLink to="/">Home</NavLink> 
                <NavLink to="/">All Projects</NavLink> 
-               <NavLink to="/">Contact</NavLink>
+               <HashLink smooth to="/#contact">Contact</HashLink>
+               <HashLink smooth to="/#services">Services</HashLink>
+
+               {/* <NavLink to="#contact">Contact</NavLink> */}
                 {/* <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
                     <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search projects" />
                 </div> */}
@@ -64,11 +68,14 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                     <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink> 
-                    <NavLink to="/"  onClick={() => setOpen(false)}>All Products</NavLink> 
-                    {user &&
-                        <NavLink to="/"  onClick={() => setOpen(false)}>My Orders</NavLink>
-                    }
-                    <NavLink to="/"  onClick={() => setOpen(false)}>Contact</NavLink>
+                    <NavLink to="/"  onClick={() => setOpen(false)}>All Projects</NavLink> 
+                    <HashLink smooth to="/#contact" onClick={() => setOpen(false)}>
+                        Contact
+                    </HashLink>
+                    <HashLink smooth to="/#services" onClick={() => setOpen(false)}>
+                        Services
+                    </HashLink>
+                    {/* <NavLink to="/"  onClick={() => setOpen(false)}>Contact</NavLink> */}
                
              {!user ? (
                 <button onClick={() => {
