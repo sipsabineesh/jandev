@@ -24,8 +24,8 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center gap-8">
                <NavLink to="/">Home</NavLink> 
                <NavLink to="/">All Projects</NavLink> 
-               <HashLink smooth to="/#contact">Contact</HashLink>
                <HashLink smooth to="/#services">Services</HashLink>
+               <HashLink smooth to="/#contact">Contact</HashLink>
 
                {/* <NavLink to="#contact">Contact</NavLink> */}
                 {/* <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
@@ -68,12 +68,12 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                     <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink> 
-                    <NavLink to="/"  onClick={() => setOpen(false)}>All Projects</NavLink> 
-                    <HashLink smooth to="/#contact" onClick={() => setOpen(false)}>
-                        Contact
-                    </HashLink>
+                    <NavLink to="/"  onClick={() => setOpen(false)}>All Projects</NavLink>
                     <HashLink smooth to="/#services" onClick={() => setOpen(false)}>
                         Services
+                    </HashLink> 
+                    <HashLink smooth to="/#contact" onClick={() => setOpen(false)}>
+                        Contact
                     </HashLink>
                     {/* <NavLink to="/"  onClick={() => setOpen(false)}>Contact</NavLink> */}
                

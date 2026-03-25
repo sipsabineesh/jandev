@@ -43,7 +43,7 @@ const MainBanner = () => {
 
         <div className="flex items-center mt-6">
           <Link
-            to="/products"
+            to="/"
             className="group flex items-center gap-2 px-7 md:px-9 py-3 bg-black hover:bg-white hover:text-black transition rounded text-white"
           >
             Explore
