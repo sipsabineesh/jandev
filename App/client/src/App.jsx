@@ -7,12 +7,14 @@ import { assets } from './assets/assets'
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const isSellerPath = useLocation().pathname.includes("seller")
+  const location = useLocation()
+  const isSellerPath = location.pathname.includes("seller")
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 700); 
-  }, []);
-
+    const timer = setTimeout(() => setLoading(false), 700)
+    return () => clearTimeout(timer)
+  }, [])
+  
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
@@ -26,9 +28,9 @@ const App = () => {
       
       {isSellerPath ? null :  <Navbar/>} 
      
-      <div className={`${isSellerPath ? "" : 'px-6 md:px-16 lg:px-24 xl:px-32'}`}>
+      <div className={`${isSellerPath ? "" : 'px-6 md:px-16 lg:px-24 xl:px-32 pt-20'}`}>
        <Routes>
-        <Route path='/' element={<Home/>} />
+         <Route path='/' element={<Home/>} />
       </Routes>
       </div>
         { !isSellerPath && <Footer/> }

@@ -1,27 +1,56 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
 import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
-     const [open, setOpen] = React.useState(false)
-     const {user,setUser,setShowUserLogin,navigate} = useAppContext()
+  const [open, setOpen] = React.useState(false)
+  const {user,setUser,setShowUserLogin,navigate} = useAppContext()
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+    useEffect(() => {
+        let lastScroll = 0;
 
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            setIsScrolled(currentScrollY > 50);
+
+            // 👉 Only hide after some scroll
+            if (currentScrollY > lastScroll && currentScrollY > 100) {
+            setShow(false);
+            } else {
+            setShow(true);
+            }
+
+            lastScroll = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
      const logout =  async() => {
         setUser(null)
         navigate('/')
      }
 
   return (
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all z-50">
-
+    <div
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+        ${show ? "translate-y-0" : "-translate-y-full"}
+        ${isScrolled 
+            ? "bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200" 
+            : "bg-transparent"
+        }`}>
+        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4">
             <NavLink to="/" onClick={() => setOpen(false)}>
              <img src={assets.logo} className="w-15" alt="logo"/>
             </NavLink>
 
             {/* Desktop Menu */}
-            <div className="hidden sm:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
                <NavLink to="/">Home</NavLink> 
                <NavLink to="/">All Projects</NavLink> 
                <HashLink smooth to="/#services">Services</HashLink>
@@ -95,6 +124,7 @@ const Navbar = () => {
             </div>
 
         </nav>
+        </div>
     )
 }
 

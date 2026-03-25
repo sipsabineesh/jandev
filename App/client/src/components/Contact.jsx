@@ -20,7 +20,8 @@ const Contact = () => {
                     <p className="text-lg font-bold mt-2">Email Support</p>
                     <p className="text-gray-500 mt-1 mb-4">Our team can respond in real time.</p>
                     <a href="contact@prebuiltui.com" className="text-indigo-600 font-semibold">
-                        contact@jan-dev-enterprises.com
+                        {/* contact@jan-dev-enterprises.com */}
+                        jandevmahe@gmail.com
                     </a>
                 </div>
                 <div className='mt-6'>
