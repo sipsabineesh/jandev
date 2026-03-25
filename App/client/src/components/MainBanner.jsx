@@ -25,14 +25,14 @@ const MainBanner = () => {
       <img
         src={banners[current].lg}
         alt="banner"
-        className="w-full hidden md:block transition-all duration-700"
+        className="w-full hidden md:block object-cover h-[750px] transition-all duration-700"
       />
 
       {/* Mobile */}
       <img
         src={banners[current].sm}
         alt="banner"
-        className="w-full md:hidden"
+        className="w-full md:hidden object-cover"
       />
 
       {/* Overlay Content */}
