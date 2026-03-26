@@ -10,17 +10,41 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // initial check
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     useEffect(() => {
         let lastScroll = 0;
 
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.scrollHeight;
+
             setIsScrolled(currentScrollY > 50);
 
-            // 👉 Only hide after some scroll
-            if (currentScrollY > lastScroll && currentScrollY > 100) {
-            setShow(false);
+            // 👉 If near footer → always show navbar
+            if (currentScrollY + windowHeight >= documentHeight - 100) {
+            setShow(true);
+            return;
+            }
+
+            if (currentScrollY > 150) {
+            if (currentScrollY > lastScroll) {
+                setShow(false);
+            } else {
+                setShow(true);
+            }
             } else {
             setShow(true);
             }
@@ -39,7 +63,7 @@ const Navbar = () => {
   return (
     <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
-        ${show ? "translate-y-0" : "-translate-y-full"}
+        ${isMobile ? "translate-y-0" : (show ? "translate-y-0" : "-translate-y-full")}
         ${isScrolled 
             ? "bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200" 
             : "bg-transparent"
