@@ -130,7 +130,7 @@ const Navbar = () => {
                     </HashLink>
                     {/* <NavLink to="/"  onClick={() => setOpen(false)}>Contact</NavLink> */}
                
-             {!user ? (
+             {/* {!user ? (
                 <button onClick={() => {
                     setOpen(false);
                     setShowUserLogin(true)
@@ -143,7 +143,7 @@ const Navbar = () => {
   hover:border-black rounded-full text-sm">
                     Logout
                 </button>
-             ) }
+             ) } */}
               
             </div>
 
