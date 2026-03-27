@@ -26,3 +26,19 @@
 .animate-fadeIn {
     animation: fadeIn 0.6s ease-in-out;
 }
+
+/* 🔥 Auto scroll animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}

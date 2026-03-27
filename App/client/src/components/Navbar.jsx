@@ -76,7 +76,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
                <NavLink to="/">Home</NavLink> 
-               <NavLink to="/">All Projects</NavLink> 
+               {/* <NavLink to="/">All Projects</NavLink>  */}
                <HashLink smooth to="/#services">Services</HashLink>
                <HashLink smooth to="/#contact">Contact</HashLink>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <button onClick={() => {
                     setShowUserLogin(true)
                 }} className="cursor-pointer px-6 py-2 mt-2 bg-black hover:bg-white transition text-white hover:text-black border border-transparent
-  hover:border-black rounded-full text-sm">
+                    hover:border-black rounded-full text-sm">
                     Login
                 </button>
              ) : (
@@ -121,7 +121,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                     <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink> 
-                    <NavLink to="/"  onClick={() => setOpen(false)}>All Projects</NavLink>
+                    {/* <NavLink to="/"  onClick={() => setOpen(false)}>All Projects</NavLink> */}
                     <HashLink smooth to="/#services" onClick={() => setOpen(false)}>
                         Services
                     </HashLink> 
