@@ -49,10 +49,10 @@ const Services = () => {
           {[...categories, ...categories].map((category, index) => (
             <div
               key={index}
-              className='min-w-[140px] md:min-w-[160px] group cursor-pointer py-5 px-3 rounded-lg flex flex-col items-center justify-center'
+              className='min-w-[140px] md:min-w-[160px] group  py-5 px-3 rounded-lg flex flex-col items-center justify-center'
               style={{ backgroundColor: category.bgColor }}
               onClick={() => {
-                navigate(`/products/${category.path.toLowerCase()}`)
+                // navigate(`/products/${category.path.toLowerCase()}`)
                 scrollTo(0, 0)
               }}
             >
