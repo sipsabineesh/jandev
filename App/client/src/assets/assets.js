@@ -79,6 +79,13 @@ import estimation_icon from "./estimation_icon.png";
 import designing_icon from "./designing_icon.png";
 import interior_designing_icon from "./interior_designing_icon.png";
 import architectural_designing_icon from "./architectural_designing_icon.png";
+import services_architectural_designing from "./services_architectural_designing.jfif";
+import services_designing from "./services_designing.jfif";
+import services_document_management from "./services_document_management.jfif";
+import services_estimation from "./services_estimation.jfif";
+import services_interior_designing from "./services_interior_designing.jfif";
+import services_planning from "./services_planning.jfif";
+import services_soil_test from "./services_soil_test.jfif";
 
 export const assets = {
   logo,
@@ -111,50 +118,57 @@ export const assets = {
   banner3,
   add_address_iamge,
   box_icon,
+  services_architectural_designing,
+  services_designing,
+  services_document_management,
+  services_estimation,
+  services_interior_designing,
+  services_planning,
+  services_soil_test
 };
 
 export const categories = [
   {
     text: "Planning",
     path: "Planning",
-    image: villas,
+    image: services_planning,
     bgColor: "#F0F5DE",
   },
   {
     text: "Estimation",
     path: "Estimation",
-    image: shops,
+    image: services_estimation,
     bgColor: "#E1F5EC",
   },
   {
     text: "Designing",
     path: "Designing",
-    image: villas,
-    bgColor: "#F0F5DE",
+    image: services_designing,
+    bgColor: "#FEE0E0",
   },
   {
     text: "Architectural Designing",
     path: "ArchitecturalDesigning",
-    image: shops,
+    image: services_architectural_designing,
     bgColor: "#E1F5EC",
   },
   {
     text: "Interior Designing",
     path: "InteriorDesigning",
-    image: villas,
+    image: services_interior_designing,
     bgColor: "#F0F5DE",
   },
   {
     text: "Soil Test",
     path: "SoilTest",
-    image: shops,
-    bgColor: "#E1F5EC",
+    image: services_soil_test,
+    bgColor: "#FEE0E0",
   },
   {
     text: "Document Management",
     path: "Document Management",
-    image: villas,
-    bgColor: "#F0F5DE",
+    image: services_document_management,
+    bgColor: "#FEF6DA",
   },
 ];
 
