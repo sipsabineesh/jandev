@@ -225,11 +225,11 @@ export const features = [
     title: "2D & 3D Architectural Plans",
     description: "Sustainable design practices",
   },
-  {
-    icon: interior_designing_icon,
-    title: "Space Planning & Layout",
-    description: "Furniture & decor selection",
-  },
+  // {
+  //   icon: interior_designing_icon,
+  //   title: "Space Planning & Layout",
+  //   description: "Furniture & decor selection",
+  // },
 
 
 ];
