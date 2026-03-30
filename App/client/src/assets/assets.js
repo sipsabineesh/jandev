@@ -1,4 +1,5 @@
 import logo from "./logo.png";
+import jandev_logo from "./jandev_logo.png";
 import search_icon from "./search_icon.svg";
 import remove_icon from "./remove_icon.svg";
 import arrow_right_icon_colored from "./arrow_right_icon_colored.svg";
@@ -89,6 +90,7 @@ import services_soil_test from "./services_soil_test.jfif";
 
 export const assets = {
   logo,
+  jandev_logo,
   search_icon,
   remove_icon,
   arrow_right_icon_colored,
@@ -144,7 +146,7 @@ export const categories = [
     text: "Designing",
     path: "Designing",
     image: services_designing,
-    bgColor: "#FEE0E0",
+    bgColor: "#FEF6DA",
   },
   {
     text: "Architectural Designing",
@@ -162,7 +164,7 @@ export const categories = [
     text: "Soil Test",
     path: "SoilTest",
     image: services_soil_test,
-    bgColor: "#FEE0E0",
+    bgColor: "#D8F9BE",
   },
   {
     text: "Document Management",

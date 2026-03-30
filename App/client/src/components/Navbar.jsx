@@ -70,7 +70,9 @@ const Navbar = () => {
         }`}>
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4">
             <NavLink to="/" onClick={() => setOpen(false)}>
-             <img src={assets.logo} className="w-15" alt="logo"/>
+             {/* <img src={assets.jandev_logo} className="w-15" alt="logo"/> */}
+             {/* <img src={assets.jandev_logo} className="h-10 md:h-14 w-auto" alt="logo"/> */}
+             <img src={assets.jandev_logo} className="h-12 md:h-16 lg:h-20 w-auto" alt="logo"/>
             </NavLink>
 
             {/* Desktop Menu */}
