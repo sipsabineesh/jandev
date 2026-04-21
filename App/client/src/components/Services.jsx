@@ -33,7 +33,7 @@ const Services = () => {
   const navigate = useNavigate()
 
   return (
-    <div id="services" className='mt-16 overflow-hidden'>
+    <div id="services" className='mt-16 overflow-hidden scroll-mt-36'>
       
       <p className='text-2xl md:text-3xl font-medium mb-6'>
         Services
