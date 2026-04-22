@@ -47,7 +47,7 @@ const Contact = () => {
                     <p className="text-lg font-bold mt-2">Call Us Directly</p>
                     <p className="text-gray-500 mt-1 mb-4">Available during working hours.</p>
                     <span className="text-indigo-600 font-semibold">
-                        (+1) 234 - 4567 - 789
+                        (+91) 94957 22344
                     </span>
                 </div>
             </div>
